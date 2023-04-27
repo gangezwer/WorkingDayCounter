@@ -36,7 +36,7 @@ public class DayCounterTest {
 
             Assert.assertEquals(endDateDate, calculatedDays);
         } catch (Exception e) {
-            Assert.fail("Error when parsing holiday.txt file");
+            Assert.fail("Error when executing completionDateCalculatorTest");
         }
     }
 
@@ -53,7 +53,7 @@ public class DayCounterTest {
 
             Assert.assertTrue(Main.checkIfDateIsHolidayOrWeekend(holidays, calendarDate));
         } catch (Exception e) {
-            Assert.fail("Error when parsing holiday.txt file");
+            Assert.fail("Error when executing holidayTest");
         }
     }
 
@@ -72,7 +72,7 @@ public class DayCounterTest {
             calendarDate.setTime(format.parse("21-08-2022"));
             Assert.assertTrue(Main.checkIfDateIsHolidayOrWeekend(holidays, calendarDate));
         } catch (Exception e) {
-            Assert.fail("Error when parsing holiday.txt file");
+            Assert.fail("Error when executing weekendTest");
         }
     }
 
@@ -91,7 +91,7 @@ public class DayCounterTest {
             calendarDate.setTime(format.parse("22-08-2022"));
             Assert.assertFalse(Main.checkIfDateIsHolidayOrWeekend(holidays, calendarDate));
         } catch (Exception e) {
-            Assert.fail("Error when parsing holiday.txt file");
+            Assert.fail("Error when executing weekdayTest");
         }
     }
 
